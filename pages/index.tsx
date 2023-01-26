@@ -1,12 +1,11 @@
 import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+// import { Inter } from '@next/font/google'
+import { extendTheme } from '@chakra-ui/react'
 
 import Header from '@/components/Header'
-import { Box, ChakraProvider } from '@chakra-ui/react'
+import { Box, ChakraProvider, Heading } from '@chakra-ui/react'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -18,9 +17,15 @@ export default function Home() {
         <link rel="icon" href="" />
       </Head>
 
-      <ChakraProvider>
+      <ChakraProvider theme={extendTheme({
+            fonts: {
+                heading: 'cursive,"Hiragino Kaku Gothic ProN',
+                body: `cursive,"Hiragino Kaku Gothic ProN"`,
+            }
+        })}>
         <Box>
           <Header />
+          <Heading>This is Home page</Heading>
         </Box>
       </ChakraProvider>
   
