@@ -1,10 +1,19 @@
-
+import { ChakraProvider, Heading, extendTheme } from '@chakra-ui/react'
+import Header from '@/components/Header'
 
 export default function AboutPage() {
 
     return(
         <>
-        <h1>This is About page</h1>
+        <ChakraProvider theme={extendTheme({
+            fonts: {
+                heading: `cursive,"Hiragino Kaku Gothic ProN"`,
+                body: `cursive,"Hiragino Kaku Gothic ProN"`,
+            }
+        })}>
+            <Header />
+        <Heading>This is Aout page</Heading>
+        </ChakraProvider>
         </>
     )
 

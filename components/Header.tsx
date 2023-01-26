@@ -11,6 +11,7 @@ export default function Header() {
                 <List>
                 <Link href={"./"} passHref >HOME</Link>
                 <Link href={"./About"} passHref >About</Link>
+                <Link href={"./Contact"} passHref >Contact</Link>
                 </List>
             </Box>
         </ChakraProvider>
