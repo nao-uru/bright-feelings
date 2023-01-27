@@ -1,18 +1,17 @@
-import { ChakraProvider, Heading, extendTheme } from '@chakra-ui/react'
-import Header from '@/components/Header'
+import Footer from '@/components/Footer '
+import HeaderNav from '@/components/HeaderNav'
+import { ChakraProvider, Container, Heading } from '@chakra-ui/react'
 
 export default function ContactPage() {
 
     return(
         <>
-        <ChakraProvider theme={extendTheme({
-            fonts: {
-                heading: `cursive,"Hiragino Kaku Gothic ProN"`,
-                body: `cursive,"Hiragino Kaku Gothic ProN"`,
-            }
-        })}>
-            <Header />
-        <Heading>This is Contact page</Heading>
+        <ChakraProvider>
+        <HeaderNav />
+        <Container h={'500px'}>
+        <Heading fontSize={'md'}>This is Contact</Heading>
+        </Container>
+        <Footer />
         </ChakraProvider>
         </>
     )
