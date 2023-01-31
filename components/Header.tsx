@@ -27,7 +27,7 @@ export const  Header =() => {
     return(
         <>
         <ChakraProvider>
-          <Heading>This is Moblie</Heading>
+          {/* <Heading>This is Moblie</Heading> */}
         </ChakraProvider>
         </>
     )
