@@ -1,11 +1,11 @@
-import { Card, ChakraProvider, Container } from '@chakra-ui/react';
+import { ChakraProvider, Container } from '@chakra-ui/react';
 import Head from 'next/head';
-import HeaderNav from '@/components/Header';
 import Footer from '@/components/Footer ';
 import Hero from '@/components/Heoro';
 import Profile from '@/components/Profile';
 import { BlogCard } from '@/components/BlogCard';
 import SnsButton from '@/components/SnsButton';
+import Header from '@/components/Header';
 
 export default function AboutPage() {
 
@@ -15,7 +15,7 @@ export default function AboutPage() {
         <title>Bright Feelings</title>
     </Head>
         <ChakraProvider>
-        <HeaderNav />
+        <Header />
         <Hero />
         <Container>
             <Profile />

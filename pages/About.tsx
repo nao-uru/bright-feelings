@@ -1,7 +1,7 @@
-import { ChakraProvider, Container, Heading } from '@chakra-ui/react';
+import { ChakraProvider, Container } from '@chakra-ui/react';
 import Head from 'next/head';
-import HeaderNav from '@/components/Header';
 import Footer from '@/components/Footer ';
+import Header from '@/components/Header';
 
 export default function AboutPage() {
 
@@ -11,7 +11,7 @@ export default function AboutPage() {
         <title>Bright Feelings</title>
     </Head>
         <ChakraProvider>
-        <HeaderNav />
+        <Header />
         <Container h='500px'>
 
         </Container>
