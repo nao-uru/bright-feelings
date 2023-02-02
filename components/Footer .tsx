@@ -8,7 +8,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+  import { FaBlog, FaFacebook, FaInstagram, FaLine } from 'react-icons/fa';
   import { ReactNode } from 'react';
   
   // const Logo = (props: any) => {
@@ -41,10 +41,11 @@ import {
   }) => {
     return (
       <chakra.button
+        target={'_blank'}
         bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
         rounded={'full'}
-        w={8}
-        h={8}
+        w={12}
+        h={12}
         cursor={'pointer'}
         as={'a'}
         href={href}
@@ -64,6 +65,7 @@ import {
   export default function Footer() {
     return (
       <Box
+        mt={'80'}
         bg={useColorModeValue('gray.50', 'gray.900')}
         color={useColorModeValue('gray.700', 'gray.200')}>
         <Container
@@ -74,11 +76,10 @@ import {
           justify={'center'}
           align={'center'}>
           {/* <Logo /> */}
-          <Stack direction={'row'} spacing={10}>
+          <Stack direction={'row'} spacing={8}>
             <Link href={'#'}>ホーム</Link>
             <Link href={'#'}>サービス</Link>
-            <Link href={'#'}>ブログ</Link>
-            <Link href={'#'}>お問い合わせ</Link>
+            <Link href={'/Contact'}>お問い合わせ</Link>
           </Stack>
         </Container>
   
@@ -94,18 +95,21 @@ import {
             spacing={4}
             justify={{ base: 'center', md: 'space-between' }}
             align={{ base: 'center', md: 'center' }}>
-            <Text>© 2023 Karikomi sample. All rights reserved</Text>
             <Stack direction={'row'} spacing={6}>
-              <SocialButton label={'Twitter'} href={'#'}>
-                <FaTwitter />
+              <SocialButton label={'Line'} href={'https://lin.ee/mKunhOU'}>
+                <FaLine size={'24'} />
               </SocialButton>
-              <SocialButton label={'YouTube'} href={'#'}>
-                <FaYoutube />
+              <SocialButton label={'Facebook'} href={'https://www.facebook.com/profile.php?id=100045123254100'}>
+                <FaFacebook size={'24'} />
               </SocialButton>
-              <SocialButton label={'Instagram'} href={'#'}>
-                <FaInstagram />
+              <SocialButton label={'Instagram'} href={'http://Instagram.com/bright_feelings_'}>
+                <FaInstagram size={'24'} />
+              </SocialButton>
+              <SocialButton label={'Blog'} href={'https://ameblo.jp/cskeiko/'}>
+                <FaBlog size={'24'} />
               </SocialButton>
             </Stack>
+            <Text>© 2023 Karikomi sample. All rights reserved</Text>
           </Container>
         </Box>
       </Box>
