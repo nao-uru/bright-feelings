@@ -3,7 +3,6 @@ import {
     Flex,
     Text,
     IconButton,
-    Button,
     Stack,
     Collapse,
     Icon,
@@ -22,7 +21,7 @@ import {
     ChevronRightIcon,
   } from '@chakra-ui/icons';
   
-  export default function HeaderNav() {
+  export default function Header() {
     const { isOpen, onToggle } = useDisclosure();
   
     return (
