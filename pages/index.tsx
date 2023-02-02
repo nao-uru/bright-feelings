@@ -1,21 +1,28 @@
-import { ChakraProvider, Container, Heading } from '@chakra-ui/react';
+import { Card, ChakraProvider, Container } from '@chakra-ui/react';
 import Head from 'next/head';
-import { Header } from '@/components/Header';
-import HeaderNav from '@/components/HeaderNav';
+import HeaderNav from '@/components/Header';
 import Footer from '@/components/Footer ';
+import Hero from '@/components/Heoro';
+import Profile from '@/components/Profile';
+import { BlogCard } from '@/components/BlogCard';
+import SnsButton from '@/components/SnsButton';
 
 export default function AboutPage() {
 
     return(
         <>
     <Head>
-        <title>Create Next App</title>
+        <title>Bright Feelings</title>
     </Head>
         <ChakraProvider>
-        <Header />
         <HeaderNav />
-        <Container h='500px'>
-        <Heading fontSize={'md'}>This is Home</Heading>
+        <Hero />
+        <Container>
+            <Profile />
+            <SnsButton />
+            <BlogCard link={'/'} img={'./heroSample.jpg'}/>
+            <BlogCard link={'/'} img={'./heroSample.jpg'}/>
+            <BlogCard link={'/'} img={'./heroSample.jpg'}/>
         </Container>
         </ChakraProvider>
         <Footer />
