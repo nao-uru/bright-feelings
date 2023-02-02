@@ -1,7 +1,7 @@
 import Footer from '@/components/Footer '
 import Head from 'next/head';
-import HeaderNav from '@/components/Header'
 import { Box, ChakraProvider, Container, Heading, Text } from '@chakra-ui/react'
+import Header from '@/components/Header';
 
 export default function ContactPage() {
 
@@ -11,7 +11,7 @@ export default function ContactPage() {
         <title>Bright Feelings</title>
         </Head>
         <ChakraProvider>
-        <HeaderNav />
+        <Header />
         <Container mt={'8'} maxW='800px'>
         <Heading fontSize={'2xl'} fontFamily={'body'}>お問い合わせ</Heading>
         <Text>お問い合わせはこちらのフォームから受け付けております。お気軽にお問い合わせください！</Text>

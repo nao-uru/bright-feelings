@@ -1,8 +1,8 @@
 import { ChakraProvider, Container, Heading, Text } from '@chakra-ui/react';
 import Head from 'next/head';
-import HeaderNav from '@/components/Header';
 import Footer from '@/components/Footer ';
 import { BlogCard } from '@/components/BlogCard';
+import Header from '@/components/Header';
 
 export default function BlogPage() {
 
@@ -12,7 +12,7 @@ export default function BlogPage() {
         <title>Bright Feelings</title>
     </Head>
         <ChakraProvider>
-        <HeaderNav />
+        <Header />
         <Container>
         <Heading fontSize={'2xl'}>ブログ</Heading>
         <Text>生活が豊かになるブログ発信中です！</Text>
